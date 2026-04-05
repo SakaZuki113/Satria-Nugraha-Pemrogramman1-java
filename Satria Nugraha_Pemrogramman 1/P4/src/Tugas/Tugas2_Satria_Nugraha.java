@@ -4,6 +4,8 @@
  */
 package Tugas;
 
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -25,11 +27,12 @@ public class Tugas2_Satria_Nugraha {
         
         // Proses        
         double total = kwh * tarif;
-        
+        Locale localeID = new Locale("id", "ID");
+        NumberFormat rupiahFormat = NumberFormat.getCurrencyInstance(localeID);
         System.out.println("=========STRUK TAGIHAN LISTRIK========");
         System.out.println("Nama Pelanggan: " +nama);
         System.out.println("Jumlah Pemakaian: " +kwh+ " kWh");
-        System.out.println("Total Bayar: " +total);
+        System.out.println("Total Bayar: " +rupiahFormat.format(total));
         System.out.println("======================================");
 
     }

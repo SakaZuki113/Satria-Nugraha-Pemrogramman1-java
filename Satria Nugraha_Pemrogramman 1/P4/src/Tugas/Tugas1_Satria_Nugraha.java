@@ -4,6 +4,8 @@
  */
 package Tugas;
 
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -13,6 +15,10 @@ import java.util.Scanner;
 public class Tugas1_Satria_Nugraha {
     public static void main(String args[]){
         Scanner input = new Scanner(System.in);
+        Locale localeID = new Locale("id", "ID");
+        NumberFormat currFormat = NumberFormat.getCurrencyInstance(localeID);
+        NumberFormat percentFormat = NumberFormat.getPercentInstance();
+        
         double makanan; double transport; double belanja;
         System.out.println("===========DAY 1===========");
         System.out.print("Total Harga Makanan: ");
@@ -32,9 +38,9 @@ public class Tugas1_Satria_Nugraha {
         
         // Output
         System.out.println("===========REPORT DAY 1===========");
-        System.out.println("Hasil Presentase Makanan: " +presentaseMakanan+"%"+ " [Pengeluaran: " +makanan+ "]");
-        System.out.println("Hasil Presentase Transport: " +presentaseTransport+"%"+ " [Pengeluaran: " +transport+ "]");
-        System.out.println("Hasil Presentase Belanja: " +presentaseBelanja+"%"+ " [Pengeluaran: " +belanja+ "]");
+        System.out.println("Hasil Presentase Makanan: " +percentFormat.format(presentaseMakanan)+ "[Pengeluaran: " +currFormat.format(makanan)+ "]");
+        System.out.println("Hasil Presentase Transport: " + percentFormat.format(presentaseTransport)+ " [Pengeluaran: " +currFormat.format(transport)+ "]");
+        System.out.println("Hasil Presentase Belanja: " +percentFormat.format(presentaseBelanja)+ " [Pengeluaran: " +currFormat.format(belanja)+ "]");
         System.out.println("===========END OF REPORT DAY 1===========");
        
         // START DAY 2        
@@ -57,9 +63,9 @@ public class Tugas1_Satria_Nugraha {
         
         // Output
         System.out.println("===========REPORT DAY 2===========");
-        System.out.println("Hasil Presentase Makanan: " +presentaseMakanan2+"%"+ " [Pengeluaran: " +makanan2+ "]");
-        System.out.println("Hasil Presentase Transport: " +presentaseTransport2+"%"+ " [Pengeluaran: " +transport2+ "]");
-        System.out.println("Hasil Presentase Belanja: " +presentaseBelanja2+"%"+ " [Pengeluaran: " +belanja2+ "]");
+        System.out.println("Hasil Presentase Makanan: " +percentFormat.format(presentaseMakanan2)+ " [Pengeluaran: " +currFormat.format(makanan2)+ "]");
+        System.out.println("Hasil Presentase Transport: " +percentFormat.format(presentaseTransport2)+ " [Pengeluaran: " +currFormat.format(transport2)+ "]");
+        System.out.println("Hasil Presentase Belanja: " +percentFormat.format(presentaseBelanja2)+ " [Pengeluaran: " +currFormat.format(belanja2)+ "]");
         System.out.println("===========END OF REPORT DAY 2===========");
         // END DAY 2  
         
@@ -83,9 +89,9 @@ public class Tugas1_Satria_Nugraha {
         
         // Output
         System.out.println("===========REPORT DAY 3===========");
-        System.out.println("Hasil Presentase Makanan: " +presentaseMakanan3+"%"+ " [Pengeluaran: " +makanan3+ "]");
-        System.out.println("Hasil Presentase Transport: " +presentaseTransport3+"%"+ " [Pengeluaran: " +transport3+ "]");
-        System.out.println("Hasil Presentase Belanja: " +presentaseBelanja3+"%"+ " [Pengeluaran: " +belanja3+ "]");
+        System.out.println("Hasil Presentase Makanan: " +percentFormat.format(presentaseMakanan3)+ " [Pengeluaran: " +currFormat.format(makanan3)+ "]");
+        System.out.println("Hasil Presentase Transport: " +percentFormat.format(presentaseTransport3)+ " [Pengeluaran: " +currFormat.format(transport3)+ "]");
+        System.out.println("Hasil Presentase Belanja: " +percentFormat.format(presentaseBelanja3)+ " [Pengeluaran: " +currFormat.format(belanja3)+ "]");
         System.out.println("===========END OF REPORT DAY 3===========");
         // END DAY 3
   
@@ -109,9 +115,9 @@ public class Tugas1_Satria_Nugraha {
         
         // Output
         System.out.println("===========REPORT DAY 4===========");
-        System.out.println("Hasil Presentase Makanan: " +presentaseMakanan4+"%"+ " [Pengeluaran: " +makanan4+ "]");
-        System.out.println("Hasil Presentase Transport: " +presentaseTransport4+"%"+ " [Pengeluaran: " +transport4+ "]");
-        System.out.println("Hasil Presentase Belanja: " +presentaseBelanja4+"%"+ " [Pengeluaran: " +belanja4+ "]");
+        System.out.println("Hasil Presentase Makanan: " +percentFormat.format(presentaseMakanan4)+ "[Pengeluaran: " +currFormat.format(makanan4)+ "]");
+        System.out.println("Hasil Presentase Transport: " +percentFormat.format(presentaseTransport4)+ " [Pengeluaran: " +currFormat.format(transport4)+ "]");
+        System.out.println("Hasil Presentase Belanja: " +percentFormat.format(presentaseBelanja4)+ " [Pengeluaran: " +currFormat.format(belanja4)+ "]");
         System.out.println("===========END OF REPORT DAY 4===========");
         // END DAY 4  
         
@@ -135,9 +141,9 @@ public class Tugas1_Satria_Nugraha {
         
         // Output
         System.out.println("===========REPORT DAY 5===========");
-        System.out.println("Hasil Presentase Makanan: " +presentaseMakanan5+"%"+ " [Pengeluaran: " +makanan5+ "]");
-        System.out.println("Hasil Presentase Transport: " +presentaseTransport5+"%"+ " [Pengeluaran: " +transport5+ "]");
-        System.out.println("Hasil Presentase Belanja: " +presentaseBelanja5+"%"+ " [Pengeluaran: " +belanja5+ "]");
+        System.out.println("Hasil Presentase Makanan: " +percentFormat.format(presentaseMakanan5)+ " [Pengeluaran: " +currFormat.format(makanan5)+ "]");
+        System.out.println("Hasil Presentase Transport: " +percentFormat.format(presentaseTransport5)+ " [Pengeluaran: " +currFormat.format(transport5)+ "]");
+        System.out.println("Hasil Presentase Belanja: " +percentFormat.format(presentaseBelanja5)+ " [Pengeluaran: " +currFormat.format(belanja5)+ "]");
         System.out.println("===========END OF REPORT DAY 5===========");
         // END DAY 5  
         
@@ -161,9 +167,9 @@ public class Tugas1_Satria_Nugraha {
         
         // Output
         System.out.println("===========REPORT DAY 6===========");
-        System.out.println("Hasil Presentase Makanan: " +presentaseMakanan6+"%"+ " [Pengeluaran: " +makanan6+ "]");
-        System.out.println("Hasil Presentase Transport: " +presentaseTransport6+"%"+ " [Pengeluaran: " +transport6+ "]");
-        System.out.println("Hasil Presentase Belanja: " +presentaseBelanja6+"%"+ " [Pengeluaran: " +belanja6+ "]");
+        System.out.println("Hasil Presentase Makanan: " +percentFormat.format(presentaseMakanan6)+ " [Pengeluaran: " +currFormat.format(makanan6)+ "]");
+        System.out.println("Hasil Presentase Transport: " +percentFormat.format(presentaseTransport6)+ " [Pengeluaran: " +currFormat.format(transport6)+ "]");
+        System.out.println("Hasil Presentase Belanja: " +percentFormat.format(presentaseBelanja6)+ " [Pengeluaran: " +currFormat.format(belanja6)+ "]");
         System.out.println("===========END OF REPORT DAY 6===========");
         // END DAY 6
         
@@ -192,13 +198,13 @@ public class Tugas1_Satria_Nugraha {
                 (highCost == total5) ? "Hari ke 5" : (highCost == total6) ? "Hari ke 6" : "Hari ke 7";
         // Output
         System.out.println("===========REPORT DAY 7 [LAST DAY]===========");
-        System.out.println("Hasil Presentase Makanan: " +presentaseMakanan7+"%" + " [Pengeluaran: " +makanan7+ "]");
-        System.out.println("Hasil Presentase Transport: " +presentaseTransport7+"%"+ " [Pengeluaran: " +transport7+ "]");
-        System.out.println("Hasil Presentase Belanja: " +presentaseBelanja7+"%"+ " [Pengeluaran: " +belanja7+ "]");
+        System.out.println("Hasil Presentase Makanan: " +percentFormat.format(presentaseMakanan7)+ " [Pengeluaran: " +currFormat.format(makanan7)+ "]");
+        System.out.println("Hasil Presentase Transport: " +percentFormat.format(presentaseTransport7)+ " [Pengeluaran: " +currFormat.format(transport7)+ "]");
+        System.out.println("Hasil Presentase Belanja: " +percentFormat.format(presentaseBelanja7)+ " [Pengeluaran: " +currFormat.format(belanja7)+ "]");
         System.out.println("===========END OF REPORT DAY 7===========");
         
         System.out.println("===========REPORT SPENT OUT 1 WEEK===========");
-        System.out.println("Pengeluaran Tertinggi: " +highCost + " Pada " +hari);
+        System.out.println("Pengeluaran Tertinggi: " +currFormat.format(highCost) + " Pada " +hari);
         System.out.println("===========END OF REPORT===========");
         // END DAY 7
     }
